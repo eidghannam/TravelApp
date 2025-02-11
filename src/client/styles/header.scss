@@ -1,0 +1,19 @@
+header {
+  text-align: center;
+  margin-bottom: 30px;
+
+  h1 {
+    font-size: 2.5em;
+    color: #007bff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    @media (max-width: 768px) {
+      font-size: 2em;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 1.8em;
+    }
+  }
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Travel App</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>Travel Weather Forecast</h1>
+      </header>
+
+      <main>
+        <section class="form-section">
+          <h2>Plan Your Trip</h2>
+          <form id="trip-form">
+            <div class="form-group">
+              <label for="city">Destination City</label>
+              <input
+                type="text"
+                id="city"
+                name="city"
+                placeholder="Enter city name"
+                value=""
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="date">Departure Date</label>
+              <input type="date" id="date" name="date" required />
+            </div>
+            <div class="form-group">
+              <label for="date">End Date</label>
+              <input type="date" id="end-date" name="date" required />
+            </div>
+
+            <input type="submit" id="submit-btn" value="Get Info" />
+          </form>
+        </section>
+
+        <section class="results-section" id="results">
+          <h2>Trip Info</h2>
+          <div id="forecast-details">
+            <!-- Forecast details will be displayed here -->
+          </div>
+          <div id="location-image">
+            <!-- Location image from Pixabay will be displayed here -->
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <p>Powered by GeoNames, Weatherbit, and Pixabay APIs</p>
+      </footer>
+    </div>
+    <script>
+      // Check that service workers are supported
+      // Register the service worker
+      if ("serviceWorker" in navigator) {
+        // Wait for the 'load' event to not block other work
+        window.addEventListener("load", async () => {
+          // Try to register the service worker.
+          try {
+            // Capture the registration for later use, if needed
+            let reg;
+            // In production, use the normal service worker registration
+            reg = await navigator.serviceWorker.register("/service-worker.js");
+            console.log("Service worker registered! 😎", reg);
+          } catch (err) {
+            console.log("😥 Service worker registration failed: ", err);
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
