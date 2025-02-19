@@ -43,6 +43,7 @@ Before running this project, ensure you have [Node.js](https://nodejs.org/) inst
 The following dependencies are used in this project:
 
 - **Express**: ^4.17.1
+- **Node.js**:v22.13.1
 - **Node-fetch**: ^3.3.2
 - **CORS**: ^2.8.5
 - **MeaningCloud**: ^1.1.10
