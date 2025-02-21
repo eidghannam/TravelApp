@@ -19,7 +19,7 @@ Before running this project, ensure you have [Node.js](https://nodejs.org/) inst
 
 ## Prerequisites
 
-- **Node.js**: v16.17.1 or later
+- **Node.js**: v22.13.1 or later
 - **npm**: v8.15.0 or later
 
 ## Installation
